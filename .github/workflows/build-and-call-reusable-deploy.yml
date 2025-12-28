@@ -36,7 +36,7 @@ jobs:
   call-reusable-deployment-workflow-job:
     needs: build-job
 
-    uses: morrisseycode-ps/shared-workflows/.github/workflows/reusable-deploy-shared-repo.yml@main
+    uses: .github/workflows/reusable-deploy.yml
     with:
       package-name: .net-app
       app-name: appsvc1
