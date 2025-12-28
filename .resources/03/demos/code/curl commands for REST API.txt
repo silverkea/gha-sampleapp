@@ -1,0 +1,9 @@
+curl -L -H "Accept: application/vnd.github+json" https://api.github.com/repos/silverkea-learn-gha/gha-sampleapp/actions/runs
+
+curl -L -H "Accept: application/vnd.github+json" https://api.github.com/repos/silverkea-learn-gha/gha-sampleapp/actions/workflows/debug%201.yml/runs
+
+curl -L -H "Accept: application/vnd.github+json" -H "Authorization: Bearer <YOUR-TOKEN>" -H "X-GitHub-Api-Version: 2022-11-28" https://api.github.com/repos/silverkea-learn-gha/gha-sampleapp/actions/workflows/WORKFLOW_ID/runs
+
+curl -L -o C:\logs\run_logs.zip https://api.github.com/repos/silverkea-learn-gha/gha-sampleapp/actions/runs/10777938223/logs
+
+curl -H "Authorization: token <YOUR-TOKEN>" -L -o C:\logs\run_logs.zip https://api.github.com/repos/silverkea-learn-gha/gha-sampleapp/actions/runs/10777938223/logs
