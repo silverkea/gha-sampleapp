@@ -24,14 +24,14 @@ jobs:
         run: dotnet build --configuration Release
 
       - name: Publish code
-        run: dotnet publish -c Release --property:PublishDir="${{ runner.temp }}\myapp"
+        run: dotnet publish -c Release --property:PublishDir="${{ runner.temp }}/myapp"
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4.3.6
         with:
           # Artifact name
           name: .net-app
-          path: ${{ runner.temp }}\myapp
+          path: ${{ runner.temp }}/myapp
 
   deploy_job:
     runs-on: windows-latest
