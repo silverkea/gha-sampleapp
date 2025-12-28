@@ -21,7 +21,7 @@ jobs:
           dotnet-version: '10.x'
 
       - name: Build code
-        run: dotnet build --configuration Release
+        run: dotnet build sampleapp.sln --configuration Release
 
       - name: Publish code
         run: dotnet publish -c Release --property:PublishDir="${{env.DOTNET_ROOT}}\myapp"
